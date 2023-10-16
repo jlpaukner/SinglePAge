@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+.c4{
+  background-color: green;
+  border: 1px solid black;
+  padding: 5px;
+}
+.c1{
+  background-color: red;
+  border: 1px solid black;
+  padding: 5px;
+}
+.rv{
+  background-color: red;
+  border: 1px solid black;
+  padding: 5px;
+}
+.rh{
+  background-color: #6e2daa;
+  border: 1px solid black;
+  padding: 5px;
+}
+.r0{
+    background-color: black;
+    border: 1px solid black;
+  padding: 5px;
+}
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+</style>
+<script>
+function cli(){
+  el= document.getElementById("p00")
+  switch (el.className){
+case "r0": 
+el.setAttribute("class", "r1")
+break;
+case "r1":
+el.setAttribute("class", "r2")
+break;
+default: 
+el.setAttribute("class", "r0")
+break;
+  }
+}
+
+</script>
+</head>
+<body class="dark-mode">
+   <div grid class="grid-container">
+    <div id="mesa" id="wrapper">
+      <div id="row0">
+        <div id="p00" class="rv" onclick="cli()" >00</div>
+        <div id="p01" class="c4">01</div>
+        <div id="p02" class="c4">02</div>
+        <div id="p03" class="rv">03</div>
+      </div> 
+        <div id="row1">
+        <div id="p10" class="rv">10</div>
+        <div id="p11" class="c4">11</div>
+        <div id="p12" class="c4">12</div> 
+        <div id="p13" class="rv">13</div>  
+      </div>
+      <div id="row2">
+        <div id="p20" class="rv">20</div>  
+        <div id="p21" class="rh">21</div>        
+        <div id="p22" class="rh">22</div>  
+        <div id="p23" class="rv">23</div>  
+      </div>
+        <div id="row3">
+        <div id="p30">30</div>  
+        <div id="p31">31</div>  
+        <div id="p32">32</div>  
+        <div id="p33">33</div>  
+      </div>
+        <div id="row4">
+        <div id="p40">40</div>
+        <div id="p41">41</div>  
+        <div id="p42">42</div>  
+        <div id="p43">43</div>
+      </div>
+        <div id="row5">  
+        <div id="p50">50</div>
+        <div id="p51">51</div>  
+        <div id="p52">52</div>  
+        <div id="p53">53</div>   
+      </div>   
+      </div>
+   </div>
+      
+</body>
+</html> 
