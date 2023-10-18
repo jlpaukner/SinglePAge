@@ -39,8 +39,10 @@
 }
 </style>
 <script>
-function cli(){
-  el= document.getElementById("p00")
+  prec=""
+function cli(nm){
+    el= document.getElementById("p"+nm)
+    el.textContent=prec
   switch (el.className){
 case "c4": 
 el.setAttribute("class", "rh")
@@ -52,33 +54,33 @@ default:
 el.setAttribute("class", "c1")
 break;
   }
+  prec=nm
 }
 
 </script>
 </head>
 <body class="dark-mode">
     <div id="mesa" class="wrapper">
-        <div id="p00" r="0" c="0" class="rv" onclick="cli()">00</div> 
-        <div id="p01" r="0" c="1" class="c4" onclick="cli()">01</div>
-        <div id="p02" r="0" c="2" class="c4" onclick="cli()">02</div>
-        <div id="p03" r="0" c="3" class="rv" onclick="cli()">03</div>
-        <div id="p10" r="1" c="0" class="rv" onclick="cli()">10</div>
-        <div id="p11" r="1" c="1" class="c4" onclick="cli()">11</div>
-        <div id="p12" r="1" c="2" class="c4" onclick="cli()">12</div> 
-        <div id="p13" r="1" c="3" class="rv" onclick="cli()">13</div>  
-        <div id="p20" r="2" c="0" class="rv" onclick="cli()">20</div>  
-        <div id="p21" r="2" c="1" class="rh" onclick="cli()">21</div>        
-        <div id="p22" r="2" c="2" class="rh" onclick="cli()">22</div>  
-        <div id="p23" r="2" c="3" class="rv" onclick="cli()">23</div>  
-        <div id="p30" r="3" c="0" class="rv" onclick="cli()">30</div>  
-        <div id="p31" r="3" c="1" class="c1" onclick="cli()">31</div>  
-        <div id="p32" r="3" c="2" class="c1" onclick="cli()">32</div>  
-        <div id="p33" r="3" c="3" class="rv" onclick="cli()">33</div>  
-        <div id="p40" r="4" c="0" class="c1" onclick="cli()">40</div>
-        <div id="p41" r="4" c="1" class="r0" onclick="cli()">41</div>  
-        <div id="p42" r="4" c="2" class="r0" onclick="cli()">42</div>  
-        <div id="p43" r="4" c="3" class="c1" onclick="cli()">43</div>
-      </div>   
-   </div>      
+        <cuad id="p00" r="0" c="0" class="rv" onclick="cli('00')">00</cuad> 
+        <cuad id="p01" r="0" c="1" class="c4" onclick="cli('01')">01</cuad>
+        <cuad id="p02" r="0" c="2" class="c4" onclick="cli('02')">02</cuad>
+        <cuad id="p03" r="0" c="3" class="rv" onclick="cli('03')">03</cuad>
+        <cuad id="p10" r="1" c="0" class="rv" onclick="cli('10')">10</cuad>
+        <cuad id="p11" r="1" c="1" class="c4" onclick="cli('11')">11</cuad>
+        <cuad id="p12" r="1" c="2" class="c4" onclick="cli('12')">12</cuad> 
+        <cuad id="p13" r="1" c="3" class="rv" onclick="cli('13')">13</cuad>  
+        <cuad id="p20" r="2" c="0" class="rv" onclick="cli('20')">20</cuad>  
+        <cuad id="p21" r="2" c="1" class="rh" onclick="cli('21')">21</cuad>        
+        <cuad id="p22" r="2" c="2" class="rh" onclick="cli('22')">22</cuad>  
+        <cuad id="p23" r="2" c="3" class="rv" onclick="cli('23')">23</cuad>  
+        <cuad id="p30" r="3" c="0" class="rv" onclick="cli('30')">30</cuad>  
+        <cuad id="p31" r="3" c="1" class="c1" onclick="cli('31')">31</cuad>  
+        <cuad id="p32" r="3" c="2" class="c1" onclick="cli('32')">32</cuad>  
+        <cuad id="p33" r="3" c="3" class="rv" onclick="cli('33')">33</cuad>  
+        <cuad id="p40" r="4" c="0" class="c1" onclick="cli('40')">40</cuad>
+        <cuad id="p41" r="4" c="1" class="r0" onclick="cli('41')">41</cuad>  
+        <cuad id="p42" r="4" c="2" class="r0" onclick="cli('42')">42</cuad>  
+        <cuad id="p43" r="4" c="3" class="c1" onclick="cli('43')">43</cuad>
+    </div>      
 </body>
 </html> 
